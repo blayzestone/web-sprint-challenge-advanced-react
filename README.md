@@ -30,13 +30,37 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+  1. Create a class that extends the React component property.
+  2. Create an object property in your class called state. (It is optional to add a constructor here since React will do that under the hood.)
+  3. You can access the properties of state using this.state.propertyName
+
 2. Describe the different phases of the component lifecycle.
+
+  There are three phases in a component's lifecycle. They are Mounting, Updating, and Unmounting.
+  * Mounting: this is the creation phase. This is when React creates the component and adds it to the DOM.
+  * Updating: This phase happens every time that React needs to make a change to the component (either through state change or new props being passed into it).
+  * Unmounting: This is the destruction phase. This is when React removes the component from the DOM.
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+  * componentDidMount is called after the component was successfully mounted to the DOM.
+  * componentDidUpdate is called after the component's update phase was succesfully completed.
+  * render runs during the mounting and update phases.
+  * componentWillUnmount runs before the component unmounts. This can be used to clean up any side effects that will persist after unmount. Like event listeners.
+
 4. Define stateful logic.
 
+  Logic that interacts with the component's state.
+
 5. Describe how to test a React component with React Testing Library.
+
+  1. Create a test file for your component.
+  2. Import React, the component being tested, and the methods you need from react testing library.
+  3. Call the test method, passing in a string for the test name, and a callback function to run your test.
+  4. In the CB, destructor the query methods needed for the test from the render method, which takes the component as an argument.
+  5. Use the query methods to find the elements in the component to be tested.
+  6. Pass the queried elements into the expect method. Then you can use a method of expect to test that element against a condition.
+  7. run npm test to see the results of the tests.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
